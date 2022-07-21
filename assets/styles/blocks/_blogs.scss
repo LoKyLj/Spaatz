@@ -1,0 +1,75 @@
+.blogs {
+
+    &__container {
+        margin: 40px auto 160px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            width: 420px;
+        }
+
+        &-pic {
+            width: 100%;
+
+            // &--wrapper {
+            // }
+        }
+
+        &-title {
+            @include fontStyle($fontOpenSans, 700, 28);
+            @include remLh(35);
+            color: $colorDarkBlue
+        }
+
+        &-descr {
+            @include fontStyle($fontOpenSans, 400, 15);
+            @include remLh(24);
+            margin-top: 25px;
+            color: $colorDarkGrey;
+        }
+    }
+
+    &__blogger {
+        display: flex;
+        margin-top: 35px;
+
+        &-avatar {
+            width: 65px;
+
+            &--wrapper {
+                padding-right: 20px;
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-name {
+            @include fontStyle($fontOpenSans, 700, 16);
+        }
+
+        &-about {
+            display: flex;
+        }
+
+        &-date {
+            @include fontStyle($fontOpenSans, 400, 14);
+        }
+
+        &-spec {
+            @include fontStyle($fontOpenSans, 400, 14);
+        }
+    }
+
+    &__button {
+        @include flexCenter;
+        margin: 85px auto 0;
+    }
+}

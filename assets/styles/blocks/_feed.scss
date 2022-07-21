@@ -1,0 +1,57 @@
+.feed {
+    background-color: $colorDarkBlue;
+    width: 100vw;
+
+    &__container {
+        margin: 160px auto;
+    }
+
+    &__title {
+        @include fontStyle($fontOpenSans, 700, 54);
+        color: $colorWhite;
+        @include remLh(60);
+        margin-right: 30px;
+
+        &--wrapper {
+            display: flex;
+        }
+
+        &-star {
+
+            &--wrapper {
+                @include flexCenter;
+            }
+        }
+    }
+
+    &__review {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        &-item {
+            width: 600px;
+        }
+    }
+
+    &__message {
+        @include fontStyle($fontOpenSans, 400, 25);
+        @include remLh(24);
+        color: $colorGrey;
+
+        &--mod {
+            color: $colorWhite;
+        }
+    }
+
+    &__sender {
+        @include fontStyle($fontOpenSans, 700, 30);
+        color: $colorWhite;
+        margin-top: 90px;
+    }
+
+    &__rate {
+        @include fontStyle($fontOpenSans, 400, 15);
+        color: $colorGrey;
+    }
+}

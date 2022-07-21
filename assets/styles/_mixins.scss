@@ -1,0 +1,167 @@
+:root {
+	--large-container: 1440px;
+}
+
+@mixin container {
+	width: var(--large-container);
+	margin: 0 auto;
+	padding: 0 50px;
+
+    // @include mediaTablet {
+    //     width: 984px;
+    // }
+
+    // @include mediaMobile {
+    //     width: 100%;
+    //     padding: 0 20px;
+	// }
+}
+
+@mixin posCenter {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin flexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin fontSize($count) {
+	font-size: calc($count / 16) + rem;
+}
+
+@mixin fontStyle($fontFamily, $fontWeight, $size) {
+	font-family: $fontFamily;
+	@include fontSize($size);
+	font-weight: $fontWeight;
+}
+
+@mixin remLh($count) {
+	line-height: calc($count / 16) + rem;
+}
+
+@mixin placeholder($color, $font: sans-serif, $size: 14px) {
+	&::-placeholder {
+		opacity: 1;
+		text-transform: uppercase;
+		font-family: $font;
+		color: $color;
+		@include fontSize($size);
+	}
+}
+
+// @mixin mediaTablet {
+// 	@media screen and (max-width: 1199px) {
+// 		@content;
+// 	}
+// }
+
+// @mixin mediaMobile {
+// 	@media screen and (max-width: 1023px) {
+// 		@content;
+// 	}
+// }
+
+
+// buttons
+
+@mixin button {
+	@include fontStyle($fontOpenSans, 700, 16);
+	height: 70px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+@mixin button--size_s {
+	width: 210px;
+}
+
+@mixin button--size_m {
+	width: 230px;
+}
+
+@mixin button--size_l {
+	width: 260px;
+}
+
+@mixin button--dark_blue {
+	background-color: $colorDarkBlue;
+	color: $colorWhite;
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: #1381cf;
+	}
+
+	&:active {
+		background-color: $colorActiveBlue;
+	}
+}
+
+@mixin button--white {
+	background-color: $colorWhite;
+	color: $colorDarkBlue;
+	transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+	&:hover {
+		color: $colorWhite;
+		background-color: $colorDarkBlue;
+	}
+
+	&:active {
+		color: $colorWhite;
+		background-color: $colorActiveBlue;
+	}
+}
+
+@mixin button--blue {
+	background-color: $colorHoverBlue;
+	color: $colorWhite;
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: #1381cf;
+	}
+
+	&:active {
+		background-color: $colorActiveBlue;
+	}
+}
+
+
+// figures
+
+@mixin circle {
+	width: 5px;
+	height: 5px;
+	background-color: $colorHoverBlue;
+	border: transparent;
+	border-radius: 50%;
+	margin: auto 10px;
+}
+
+@mixin arrow--wrapper {
+	padding-left: 15px;
+}
+
+
+
+// separators
+
+@mixin separator {
+	background-color: $colorDarkGrey;
+	height: 1px;
+	border: none;
+}
+
+// @mixin separator--coral {
+// 	background-color: $colorCoral;
+// }
+
+// @mixin separator--grey {
+// 	background-color: $colorWhite;
+// }

@@ -1,0 +1,164 @@
+.features {
+    background-color: $colorBackgroundGrey;
+    width: 100vw;
+
+    &__container {
+        margin: 160px auto;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        width: 645px;
+
+        &-heading {
+            @include fontStyle($fontOpenSans, 700, 54);
+            text-transform: capitalize;
+            color: $colorDarkBlue;
+            @include remLh(60);
+
+            &--mod {
+                color: $colorHoverBlue;
+            }
+        }
+
+        &-descr {
+            @include fontStyle($fontOpenSans, 400, 15);
+            text-transform: capitalize;
+            @include remLh(24);
+            margin-top: 30px;
+            color: $colorDarkBlue;
+        }
+    }
+
+    &__pic-employees {
+
+        &--wrapper {
+            position: relative;
+        }
+
+        &--icon {
+            position: absolute;
+            top: 80px;
+            right: 500px;
+        }
+
+        &--text {
+            position: absolute;
+            @include fontStyle($fontOpenSans, 400, 25);
+            width: 160px;
+            text-transform: capitalize;
+            color: $colorWhite;
+            top: 170px;
+            left: 80px;
+        }
+    }
+}
+
+.row {
+
+    &__block {
+        background-color: $colorWhite;
+        border-radius: 25px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.075); /* Параметры тени */
+        padding: 10px;
+
+        &--second {
+            height: 250px;
+        }
+
+        &--third {
+            height: 280px;
+        }
+    }
+
+    &__tools {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 340px;
+        padding: 40px;
+
+        &-title {
+            @include fontStyle($fontOpenSans, 700, 28);
+            @include remLh(35);
+        }
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__responsive {
+        width: 640px;
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 40px 0;
+
+        &-title {
+            @include fontStyle($fontOpenSans, 700, 28);
+            @include remLh(35);
+            width: 180px;
+        }
+    }
+
+    &__monitoring {
+        @include flexCenter;
+        width: 340px;
+    }
+
+    &__chart {
+        display: flex;
+        justify-content: space-between;
+        width: 840px;
+        background-color: $colorExtraDarkBlue;
+        padding: 0;
+
+        &-title {
+            @include fontStyle($fontOpenSans, 700, 28);
+            @include remLh(35);
+            color: $colorWhite;
+            text-align: right;
+
+            &--wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 40px 40px 40px 0;
+            }
+        }
+
+        &-button {
+            @include flexCenter;
+            align-self: center;
+        }
+    }
+
+
+    &__media {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 480px;
+        padding: 40px;
+
+        &-title {
+            @include fontStyle($fontOpenSans, 700, 28);
+            @include remLh(35);
+        }
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

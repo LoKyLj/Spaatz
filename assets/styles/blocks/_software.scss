@@ -1,0 +1,74 @@
+.software {
+
+    &__container {
+        margin: 160px auto;
+    }
+
+    &__title {
+        text-align: center;
+        @include fontStyle($fontOpenSans, 700, 54);
+        text-transform: capitalize;
+        color: $colorDarkBlue;
+        @include remLh(60);
+
+        &--mod {
+            color: $colorHoverBlue;
+        }
+    }
+
+    &--inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    &__list {
+
+        &-item {
+            margin-top: 10px;
+            width: 430px;
+            padding: 30px;
+            border-radius: 25px;
+            transition: background-color .3s ease-in-out;
+            cursor: pointer;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:hover {
+                background-color: $colorDarkBlue;
+            }
+
+            &:hover .software__list-name {
+                color: $colorWhite;
+            }
+
+            &:hover .software__list-descr {
+                color: $colorWhite;
+            }
+        }
+
+        &-name {
+            @include fontStyle($fontOpenSans, 700, 28);
+            @include remLh(35);
+            color: $colorGrey;
+            transition: color .3s ease-in-out;
+        }
+
+        &-descr {
+            @include fontStyle($fontOpenSans, 400, 15);
+            @include remLh(24);
+            text-transform: capitalize;
+            color: $colorGrey;
+            transition: color .3s ease-in-out;
+        }
+    }
+
+    &__pic {
+
+        &--wrapper {
+            @include flexCenter;
+        }
+    }
+}

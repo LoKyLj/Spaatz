@@ -1,0 +1,54 @@
+.benefits {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin: 520px auto 160px;
+    }
+
+    &__title {
+        width: 645px;
+
+        &-heading {
+            @include fontStyle($fontOpenSans, 700, 54);
+            text-transform: capitalize;
+            color: $colorDarkBlue;
+            @include remLh(60);
+
+            &--mod {
+                color: $colorHoverBlue;
+            }
+        }
+
+        &-descr {
+            @include fontStyle($fontOpenSans, 400, 15);
+            text-transform: capitalize;
+            @include remLh(24);
+            margin: 30px 0 25px;
+            color: $colorDarkBlue;
+        }
+
+        &-list {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        &-icon {
+
+            &--wrapper {
+                margin-right: 20px;
+            }
+        }
+
+        &-item {
+            @include fontStyle($fontOpenSans, 400, 23);
+            color: $colorDarkBlue;
+            @include remLh(28);
+        }
+
+        &-info {
+            @include fontStyle($fontOpenSans, 400, 15);
+            @include remLh(40);
+        }
+    }
+}

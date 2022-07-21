@@ -1,0 +1,122 @@
+.footer {
+    background-color: $colorDarkBlue;
+    z-index: 1;
+
+    &__container {
+        padding: 150px 0 70px;
+        margin: 0 auto;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        &-block {
+
+            &--info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 265px;
+            }
+
+            &--links {
+                display: flex;
+                justify-content: space-between;
+                background-color: $colorSemiDarkBlue;
+                border-radius: 20px;
+                width: 675px;
+                height: 330px;
+                padding: 55px 70px;
+            }
+
+            &--pic {
+                width: 330px;
+                height: 330px
+            }
+        }
+
+        &--second {
+            @include flexCenter;
+        }
+    }
+
+    &__descr {
+        @include fontStyle($fontOpenSans, 400, 15);
+        @include remLh(24);
+        color: $colorGrey;
+        margin-top: 20px;
+    }
+
+    &__socWeb {
+
+        &-list {
+            display: flex;
+            justify-self: flex-end;
+        }
+
+        &-icon {
+
+            &--wrapper {
+                @include flexCenter;
+                margin-right: 35px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-heading {
+            @include fontStyle($fontOpenSans, 700, 15);
+            @include remLh(24);
+            color: $colorWhite;
+        }
+
+        &-item {
+            @include fontStyle($fontOpenSans, 400, 13);
+            @include remLh(15);
+            color: $colorGrey;
+            cursor: pointer;
+            transition: color .2s ease-in-out;
+
+            &:hover {
+                color: $colorWhite;
+            }
+
+            &:active {
+                color: $colorDarkGrey;
+            }
+        }
+    }
+
+    &__pic {
+        height: 335px;
+        width: 335px;
+        cursor: pointer;
+    }
+
+    &__copyright {
+        @include fontStyle($fontOpenSans, 400, 13);
+        @include remLh(18);
+        color: $colorGrey;
+        margin-top: 10px;
+
+        &--mod {
+            color: $colorHoverBlue;
+            cursor: pointer;
+            transition: color .2s ease-in-out;
+
+            &:hover {
+                color: $colorActiveBlue;
+            }
+
+            &:active {
+                color: $colorDarkGrey;
+            }
+        }
+    }
+}

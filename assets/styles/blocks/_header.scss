@@ -1,0 +1,54 @@
+.header {
+    position: relative;
+    height: 1086px;
+    left: 0%;
+    right: 0%;
+    top: 0px;
+    background: url(../images/header/headerBG.svg) no-repeat center center, #29A0F5;
+    border-radius: 0px;
+    background-size: cover;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+    }
+
+    &__nav {
+        display: flex;
+
+        &--wrapper {
+            display: flex;
+            align-items: center;
+        }
+        
+        &-item {
+            @include fontStyle($fontOpenSans, 400, 18);
+            margin-right: 60px;
+        }
+
+        &-link {
+            color: $colorDarkBlue;
+            cursor: pointer;
+            transition: color .3s ease-in-out;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                color: $colorHoverBlue;
+            }
+
+            &:active {
+                color: $colorActiveBlue;
+            }
+        }
+    }
+
+    &__button {
+        @include flexCenter;
+        align-self: center;
+        height: 60px;
+    }
+}

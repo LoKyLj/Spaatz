@@ -1,0 +1,37 @@
+.demo {
+    position: relative;
+    background: linear-gradient(90deg, #C4F5C9, #30A8FF);
+    padding-top: 140px;
+
+    &__container {
+        margin: 0 auto;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__heading {
+        @include fontStyle($fontOpenSans, 700, 54);
+        @include remLh(60);
+        color: $colorDarkBlue;
+        width: 580px;
+        text-transform: capitalize;
+    }
+
+    &__button {
+        @include flexCenter;
+        align-self: flex-end;
+    }
+
+    &__pic {
+        position: absolute;
+        bottom: -5px;
+
+        &--wrapper {
+            height: 600px;
+            margin-top: 80px;
+        }
+    }
+}
